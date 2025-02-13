@@ -5,3 +5,5 @@
 {"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/logout\",\"status\":\"404\",\"responseTime\":\"10.416\"}","timestamp":"2025-02-13T07:22:20.478Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/logout\",\"status\":\"404\",\"responseTime\":\"1.937\"}","timestamp":"2025-02-13T07:22:55.510Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/users/logout\",\"status\":\"200\",\"responseTime\":\"6.461\"}","timestamp":"2025-02-13T07:23:03.253Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/\",\"status\":\"200\",\"responseTime\":\"29.848\"}","timestamp":"2025-02-13T07:31:36.147Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/favicon.ico\",\"status\":\"404\",\"responseTime\":\"8.387\"}","timestamp":"2025-02-13T07:31:36.253Z"}
