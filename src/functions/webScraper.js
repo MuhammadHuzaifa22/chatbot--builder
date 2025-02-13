@@ -1,10 +1,10 @@
-const {
+import {
   HTMLWebBaseLoader,
-} = require("@langchain/community/document_loaders/web/html");
-const {
+} from "@langchain/community/document_loaders/web/html";
+import {
   MozillaReadabilityTransformer,
-} = require("@langchain/community/document_transformers/mozilla_readability");
-const { RecursiveCharacterTextSplitter } = require("langchain/text_splitter");
+} from "@langchain/community/document_transformers/mozilla_readability";
+import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
 
 const scrapePages = async (urls) => {
   const scrapedData = [];
@@ -40,4 +40,4 @@ const scrapePages = async (urls) => {
   return scrapedData;
 };
 
-module.exports = scrapePages;
+export default  scrapePages;

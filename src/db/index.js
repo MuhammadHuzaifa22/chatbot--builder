@@ -1,5 +1,7 @@
-const mongoose = require("mongoose");
+// import module
+import mongoose from "mongoose";
 
+// connect data base function
 const connectDB = async () => {
   try {
     const connectionInstance = await mongoose.connect(process.env.MONGO_DB_URI);
@@ -10,4 +12,5 @@ const connectDB = async () => {
   }
 };
 
-module.exports = connectDB;
+// export function
+export default connectDB;

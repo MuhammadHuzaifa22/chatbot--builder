@@ -1,6 +1,8 @@
-const jwt = require("jsonwebtoken");
-const Users = require("../models/users.models");
+// import modules
+import jwt from "jsonwebtoken";
+import Users from "../models/users.models";
 
+// user authentication check
 const isUserAuthenticated = async (req, res, next) => {
   const token = req.headers["authorization"];
   if (!token) return res.status(401).json({ message: "no token found" });
@@ -13,4 +15,4 @@ const isUserAuthenticated = async (req, res, next) => {
 };
 
 // exporting middleware
-module.exports = isUserAuthenticated;
+export default isUserAuthenticated;

@@ -1,5 +1,5 @@
 // import mongoose
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 // Chat bot schema
 const chatBotsSchema = new mongoose.Schema({
@@ -18,4 +18,5 @@ const chatBotsSchema = new mongoose.Schema({
 });
 
 // export schema
-module.exports = mongoose.model('ChatBot',chatBotsSchema);
+const chatbotModel = mongoose.model('ChatBot',chatBotsSchema);
+export default chatbotModel;

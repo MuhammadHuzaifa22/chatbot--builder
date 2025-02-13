@@ -1,5 +1,6 @@
-const axios = require("axios");
-const xml2js = require("xml2js");
+// import modules
+import axios from "axios";
+import xml2js from "xml2js";
 
 //? This function will fetch the complete sitemap of the given domain and return only the top 20 urls in the sitemap
 const fetchSitemap = async (url) => {
@@ -39,4 +40,6 @@ const fetchSitemap = async (url) => {
   }
 };
 
-module.exports = fetchSitemap
+
+// export function
+export default fetchSitemap;

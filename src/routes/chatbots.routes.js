@@ -1,10 +1,10 @@
-// importing
-const express = require("express");
-const {
+// import modules
+import express from "express";
+import {
   createChatBot,
   uploadImage,
-} = require("../controllers/chatbots.controllers");
-const upload = require("../middleware/multer.middleware");
+} from "../controllers/chatbots.controllers.js";
+import upload from "../middleware/multer.middleware.js";
 const router = express.Router();
 
 // define routes
@@ -13,4 +13,4 @@ router.post("/uploadImage", upload.single("image"), uploadImage);
 
 
 // export router
-module.exports = router;
+export default router;

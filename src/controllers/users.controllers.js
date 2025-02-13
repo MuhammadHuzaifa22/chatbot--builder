@@ -1,15 +1,9 @@
-// importing
-const jwt = require("jsonwebtoken");
-const User = require("../models/users.models.js");
-const bcrypt = require("bcrypt");
-const validator = require("validator");
-const fs = require("fs");
-const {
-  errorHandler,
-  successHandler,
-} = require("../utils/responseHandlers.js");
-
-
+// import modules
+import jwt from "jsonwebtoken";
+import User from "../models/users.models.js";
+import bcrypt from "bcrypt";
+import validator from "validator";
+import { errorHandler, successHandler } from "../utils/responseHandlers.js";
 
 // register user
 const registerUser = async (req, res) => {
@@ -21,11 +15,11 @@ const registerUser = async (req, res) => {
     if (!validator.isEmail(email))
       return errorHandler("Email is not valid.", 400, res);
 
-// user already register check
+    // user already register check
     const user = await User.findOne({ email: email });
     if (user) return errorHandler("Email already exists", 400, res);
 
-// creating user
+    // creating user
     const createdUser = await User.create({
       username,
       email,
@@ -45,7 +39,6 @@ const loginUser = async (req, res) => {
   if (!email) return errorHandler("Email is required", 400, res);
   if (!password) return errorHandler("Password is required", 400, res);
   if (!validator.isEmail(email)) return errorHandler("Email is not valid", 400, res);
-
   const user = await User.findOne({ email: email });
 
   if (!user) return errorHandler("No user found.", 400, res);
@@ -68,10 +61,10 @@ const loginUser = async (req, res) => {
   });
 };
 
-// logout
+// logout user
 const logoutUser = async (req, res) => {
   res.clearCookie("refreshToken");
-  res.status(200).json({ message: "Logged out successfully" });
+  return successHandler("Logout successfully", 200, res);
 };
 
 // refreshToken
@@ -88,4 +81,5 @@ const refreshToken = async (req, res) => {
   res.json({ decoded });
 };
 
-module.exports = { registerUser, loginUser, logoutUser, refreshToken };
+// export functions
+export { registerUser, loginUser, logoutUser, refreshToken };

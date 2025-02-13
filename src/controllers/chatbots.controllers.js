@@ -1,12 +1,12 @@
-// importing
-const exportData = require("../functions/exportData");
-const fetchSitemap = require("../functions/fetchSitemap");
-const scrapePages = require("../functions/webScraper");
-const { errorHandler, successHandler } = require("../utils/responseHandlers");
-const Users = require("../models/users.models"); // user model
-const ChatBots = require("../models/chatbot.models");
-const cloudinary = require("cloudinary").v2;
-const fs = require("fs");
+// import
+import {exportData} from "../functions/exportData.js";
+import fetchSitemap from "../functions/fetchSitemap.js";
+import scrapePages from "../functions/webScraper.js";
+import { errorHandler, successHandler } from "../utils/responseHandlers.js";
+import Users from "../models/users.models.js"; // user model
+import ChatBots from "../models/chatbot.models.js";
+import { v2 as cloudinary } from "cloudinary";
+import fs from "fs";
 
 cloudinary.config({
   cloud_name: "dyir4qmaf",
@@ -33,7 +33,7 @@ const uploadImageToCloudinary = async (localpath) => {
 const createChatBot = async (req, res) => {
   try {
     // request from body
-    console.log('create chat bot function')
+    console.log("create chat bot function");
     const { name, tagline, webURL, userID, image } = req.body;
     console.log("web url ===>", webURL);
 
@@ -96,4 +96,4 @@ const uploadImage = async (req, res, image) => {
 };
 
 // exporting chatbot
-module.exports = { createChatBot, uploadImage };
+export { createChatBot, uploadImage };

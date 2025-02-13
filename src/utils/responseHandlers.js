@@ -17,4 +17,4 @@ const errorHandler = async (message, statusCode, res, data = "") => {
 };
 
 
-module.exports = { errorHandler, successHandler };
+export { errorHandler, successHandler };

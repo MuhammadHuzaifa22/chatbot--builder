@@ -1,0 +1,7 @@
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/users/login\",\"status\":\"400\",\"responseTime\":\"140.618\"}","timestamp":"2025-02-13T06:58:16.563Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/users/register\",\"status\":\"200\",\"responseTime\":\"493.859\"}","timestamp":"2025-02-13T06:58:25.396Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/chatbots/create\",\"status\":\"200\",\"responseTime\":\"57121.283\"}","timestamp":"2025-02-13T06:59:46.334Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/logout\",\"status\":\"404\",\"responseTime\":\"8.105\"}","timestamp":"2025-02-13T07:21:18.316Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/logout\",\"status\":\"404\",\"responseTime\":\"10.416\"}","timestamp":"2025-02-13T07:22:20.478Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/logout\",\"status\":\"404\",\"responseTime\":\"1.937\"}","timestamp":"2025-02-13T07:22:55.510Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/v1/users/logout\",\"status\":\"200\",\"responseTime\":\"6.461\"}","timestamp":"2025-02-13T07:23:03.253Z"}
